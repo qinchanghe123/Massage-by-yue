@@ -251,9 +251,10 @@
             background-color: var(--white);
         }
 
+        /* UPDATED: Service Grid Logic for max 3 items per row */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(3, 1fr); /* Explicitly 3 columns on desktop */
             gap: 40px;
         }
 
@@ -468,6 +469,10 @@
         }
 
         /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
         @media (max-width: 768px) {
             .menu-toggle { display: block; }
             nav ul {
@@ -486,6 +491,7 @@
             .about-container, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
             .hero-content h1 { font-size: 3rem; }
             section { padding: 60px 5%; }
+            .services-grid { grid-template-columns: 1fr; }
         }
 
         @keyframes fadeInUp {
@@ -570,10 +576,10 @@
                 <!-- Setmore Integration Script -->
                 <script id="anywhere_book_now_script" type="text/javascript" src="https://assets.setmore.com/integration/book-now/live/v1/anywhere-book-now.js"></script>
                 
-                <!-- Setmore Button with Luxury Styling -->
+                <!-- Setmore Button with Luxury Styling and New Link -->
                 <button id="Anywhere_button_iframe" 
                         class="anywhere-book-now-button btn" 
-                        data-booking-url="https://rodrigop6bi.setmore.com" 
+                        data-booking-url="https://massagebyyue.setmore.com" 
                         data-new-tab="false"
                         style="width: auto; background-color: var(--accent); border: 1px solid var(--accent); color: white;">
                     Book Now
